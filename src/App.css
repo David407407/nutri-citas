@@ -1,0 +1,14 @@
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: url(img/1.jfif);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.fondo-negro {
+  background-color: rgba(0, 0, 0, .7);
+}
