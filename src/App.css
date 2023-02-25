@@ -12,3 +12,13 @@ body {
 .fondo-negro {
   background-color: rgba(0, 0, 0, .7);
 }
+
+.actual {
+  color: rgb(239 68 68);
+  background: #fff;
+}
+
+a:hover {
+  color: rgb(239 68 68);
+  background: #fff;
+}
