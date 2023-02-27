@@ -1,12 +1,14 @@
 import {useState, useEffect} from 'react'
 import Membresia from './Membresia'
 import Navegacion from './Navegacion'
+import Paginacion from './Paginacion'
 import PlanNutricional from './PlanNutricional'
 import Resumen from './Resumen'
 
-const Servicios = ({ usuario }) => {
+const Servicios = ({ usuario, setUsuario }) => {
 
   const [modal, setModal] = useState('1')
+  const [servicios, setServicios] = useState({})
 
   return (
     <div className='text-white'>
@@ -18,8 +20,10 @@ const Servicios = ({ usuario }) => {
         />
 
         { modal === '1' && <PlanNutricional/> }
-        { modal === '2' && <Membresia/> }
+        { modal === '2' && <Membresia setUsuario={setUsuario} setServicios={setServicios}/> }
         { modal === '3' && <Resumen/> }
+
+        <Paginacion/>
 
     </div>
   )
