@@ -19,11 +19,14 @@ const Servicios = ({ usuario, setUsuario }) => {
           setModal={setModal}
         />
 
-        { modal === '1' && <PlanNutricional/> }
-        { modal === '2' && <Membresia setUsuario={setUsuario} setServicios={setServicios}/> }
-        { modal === '3' && <Resumen/> }
+        { modal === '1' && <PlanNutricional servicios={servicios} setServicios={setServicios} /> }
+        { modal === '2' && <Membresia servicios={servicios} setServicios={setServicios}/> }
+        { modal === '3' && <Resumen servicios={servicios}/> }
 
-        <Paginacion/>
+        <Paginacion
+          modal={modal}
+          setModal={setModal}
+        />
 
     </div>
   )
